@@ -4,7 +4,7 @@ kind: ClusterIssuer
 metadata:
   name: letsencrypt-production
   annotations:
-    kapp.k14s.io/change-group: cert-manager/cluster-issuer
+#!    kapp.k14s.io/change-group: cert-manager/cluster-issuer
     kapp.k14s.io/change-rule: "upsert after upserting cert-manager"
 spec:
   acme:
