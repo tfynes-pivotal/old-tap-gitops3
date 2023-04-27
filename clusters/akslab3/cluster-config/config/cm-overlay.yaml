@@ -7,7 +7,7 @@ type: Opaque
 stringData:
   cm-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind": "ServiceAccount", "metadata": {"name": "default"}})
+    #@overlay/match by=overlay.subset({"kind": "Pod", "metadata": {"namespace": "tap-gui"}})
     ---
     #@overlay/match missing_ok=True
     #@overlay/match-child-defaults missing_ok=True
