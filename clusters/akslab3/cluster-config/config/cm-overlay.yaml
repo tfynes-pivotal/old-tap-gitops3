@@ -6,7 +6,9 @@ metadata:
 stringData:
   cm-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind":"Pod"}), expects="0+"
+    #@ tapguins = overlay.subset({"metadata":{"namespace":"tap-gui"}})
+    #@ pods = overlay.subset({"kind":"Pod"})
+    #@overlay/match by=overlay.or_op(tapguins, pods), expects="0+"
     ---
     spec:
       #@overlay/match by=overlay.all, expects="0+"
