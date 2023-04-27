@@ -4,7 +4,7 @@ tap_install:
         shared:
           ingress_domain: "akslab3.tap.fynesy.com"
           #!ingress_issuer: "letsencrypt-production"
-          ingress_issuer: "letsencrypt-production"
+          ingress_issuer: ""
 
         #!  image_registry:
         #!    project_path: "SERVER-NAME/REPO-NAME"
