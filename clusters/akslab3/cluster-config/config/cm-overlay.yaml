@@ -12,7 +12,6 @@ stringData:
     #@overlay/match missing_ok=True
     #@overlay/match-child-defaults missing_ok=True
     metadata:
-      labels:
+      annotations:
         foo:bar
-        foo2:bar2
 
