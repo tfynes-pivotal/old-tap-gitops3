@@ -6,10 +6,10 @@ metadata:
 stringData:
   cm-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@ tapguins = overlay.subset({"metadata":{"namespace":"tap-gui"}})
-    #@ pods = overlay.subset({"kind":"Pod"})
-    #@overlay/match by=overlay.or_op(tapguins, pods), expects="0+"
+    #@overlay/match by=overlay.subset({"kind":"Namespace"}),expects="1+"
     ---
-    spec:
-      #@overlay/replace
-      serviceAccount: "tap-gui"
+    metadata:
+      #@overlay/match missing_ok=True
+      labels:
+        #@overlay/match missing_ok=True
+        foo: bar
