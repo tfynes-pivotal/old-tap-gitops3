@@ -6,7 +6,7 @@ metadata:
 stringData:
   cm-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind":"Namespace"}),expects="1+"
+    #@overlay/match by=overlay.subset({"kind":"Pod"}),expects="1+"
     ---
     metadata:
       #@overlay/match missing_ok=True
