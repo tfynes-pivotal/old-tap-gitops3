@@ -11,6 +11,5 @@ stringData:
     #@overlay/match by=overlay.or_op(tapguins, pods), expects="0+"
     ---
     spec:
-      #@overlay/match by=overlay.all, expects="0+"
+      #@overlay/replace
       serviceAccount: "tap-gui"
-      serviceAccountName: "tap-gui"
