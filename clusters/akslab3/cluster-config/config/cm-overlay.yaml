@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cm-overlay
+  namespace: tap-install
+stringData:
+  cm-overlay.yaml: |
+    #@ load("@ytt:overlay", "overlay")
+    #@overlay/match by=overlay.subset({"metadata":{"namespace":"tap-gui"},"kind":"Pod"}, expect ="0+""
+    ---
+    spec:
+      #@overlay/replace
+      serviceAccount: "tap-gui"
+      #@overlay/replace
+      serviceAccountName: "tap-gui"
