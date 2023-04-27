@@ -3,13 +3,14 @@ kind: Secret
 metadata:
   name: cm-overlay
   namespace: tap-install
+type: Opaque
 stringData:
   cm-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind":"Deployment"}),expects="0+"
+    #@overlay/match by=overlay.subset({"kind": "ServiceAccount", "metadata": {"name": "cert-manager"}})
     ---
+    #@overlay/match missing_ok=True
+    #@overlay/match-child-defaults missing_ok=True
     metadata:
-      #@overlay/match missing_ok=True
-      labels:
-        #@overlay/match missing_ok=True
-        foo: bar
+      annotations:
+        foo:bar
