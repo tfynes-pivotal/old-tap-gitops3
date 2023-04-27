@@ -9,7 +9,6 @@ stringData:
     #@overlay/match by=overlay.subset({"metadata":{"namespace":"tap-gui"},"kind":"Pod"}, expects="0+"
     ---
     spec:
-      #@overlay/replace
+      #@overlay/match by=overlay.all, expects="0+"
       serviceAccount: "tap-gui"
-      #@overlay/replace
       serviceAccountName: "tap-gui"
