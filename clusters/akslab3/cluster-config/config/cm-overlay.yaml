@@ -13,5 +13,5 @@ stringData:
     #@overlay/match-child-defaults missing_ok=True
     metadata:
       annotations:
-        foo:bar
+        foo: bar
 
