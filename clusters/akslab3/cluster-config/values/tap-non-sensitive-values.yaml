@@ -122,6 +122,6 @@ tap_install:
         - name: tap-gui
           secrets:
           - name: cm-tap-gui-sa-overlay
-        - name: cert-manager
-          secrets:
-          - name: cm-overlay
+        # - name: cert-manager
+        #   secrets:
+        #   - name: cm-overlay
