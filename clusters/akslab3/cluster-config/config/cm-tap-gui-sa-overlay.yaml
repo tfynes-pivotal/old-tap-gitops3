@@ -14,7 +14,7 @@ stringData:
     #@ end
 
 
-   #! #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}}), expects="0+"
+   #! #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui-dummy"}}), expects="0+"
    #! --- 
    #! #@ addImagePullSecret()
 
