@@ -6,8 +6,11 @@ metadata:
 stringData:
   cm-tap-gui-sa-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"metadata":{"name":"tap-gui"},"kind":"ServiceAccount"}), expects="0+"
-    ---
+    #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}})
+    --- 
     #@overlay/append
     imagePullSecrets:
     - name: private-registry-credentials
+
+   #! #@overlay/match by=overlay.subset({"metadata":{"name":"tap-gui"},"kind":"ServiceAccount"}), expects="0+"
+   #! #@ add_orphan_annotation()
