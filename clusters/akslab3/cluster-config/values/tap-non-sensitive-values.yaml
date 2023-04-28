@@ -115,9 +115,9 @@ tap_install:
             # - name: install-registry-dockerconfig
             #   namespace: tanzu-sync
             #   create_export: true
-             - name: my-registry-credentials
-               namespace: tap-install
-               create_export: true
+           - name: my-registry-credentials
+             namespace: tap-install
+             create_export: true
         package_overlays:
         - name: tap-gui
           secrets:
