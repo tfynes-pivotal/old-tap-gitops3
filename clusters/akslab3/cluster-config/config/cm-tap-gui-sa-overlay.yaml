@@ -23,7 +23,6 @@ stringData:
 
     #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}}), expects="0+"
     --- 
-    #! #@ addImagePullSecret()
     #@ addTestLabel()
 
    #! #@overlay/match by=overlay.subset({"metadata":{"name":"tap-gui"},"kind":"ServiceAccount"}), expects="0+"
