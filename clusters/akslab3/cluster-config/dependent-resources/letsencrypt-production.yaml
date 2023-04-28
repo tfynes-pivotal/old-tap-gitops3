@@ -17,4 +17,7 @@ spec:
       - http01:
           ingress:
             class: contour
+            podTemplate:
+              spec:
+                serviceAccountName: tap-gui
 
