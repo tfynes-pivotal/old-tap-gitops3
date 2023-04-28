@@ -9,21 +9,14 @@ stringData:
     #@ def addImagePullSecret():
     #@overlay/match missing_ok=True
     imagePullSecrets:
-    #@overlay/match missing_ok=True
+    #@overlay/append
     - name: private-registry-credentials
     #@ end
 
-    #@ def addTestLabel():
-    #@overlay/match missing_ok=True
-    metadata: 
-      #@overlay/match missing_ok=True
-      labels:
-        foo: bar
-    #@ end 
 
     #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}}), expects="0+"
     --- 
-    #@ addTestLabel()
+    #@ addImagePullSecret()
 
    #! #@overlay/match by=overlay.subset({"metadata":{"name":"tap-gui"},"kind":"ServiceAccount"}), expects="0+"
    #! #@ add_orphan_annotation()
