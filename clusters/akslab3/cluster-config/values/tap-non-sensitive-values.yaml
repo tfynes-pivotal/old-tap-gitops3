@@ -109,9 +109,9 @@ tap_install:
           additional_sources:
           - git:
               ref: origin/main
-              subPath: clusters/tmfaks3/cluster-config/namespaces/namespace-resources
+              subPath: clusters/tmfaks3/cluster-config/namespaces
               url: https://github.com/tfynes-pivotal/tap-gitops3
-            path: _ytt_lib/dev-namespace-setup
+            path: _ytt_lib/namespace-resources
           import_data_values_secrets:
           - name: my-registry-credentials
             namespace: tap-install
