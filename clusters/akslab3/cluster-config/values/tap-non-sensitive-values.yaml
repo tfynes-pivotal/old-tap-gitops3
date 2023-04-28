@@ -107,14 +107,12 @@ tap_install:
              subPath: clusters/tmfaks3/cluster-config/namespaces
              url: https://github.com/tfynes-pivotal/tap-gitops3
            additional_sources:
-             - git:
-                 ref: origin/main
-                 subPath: clusters/tmfaks3/cluster-config/namespaces/namespace-resources
-                 url: https://github.com/tfynes-pivotal/tap-gitops3
+           - git:
+               ref: origin/main
+               subPath: clusters/tmfaks3/cluster-config/namespaces/namespace-resources
+               url: https://github.com/tfynes-pivotal/tap-gitops3
+             path: _ytt_lib/dev-namespace-setup
            import_data_values_secrets:
-            # - name: install-registry-dockerconfig
-            #   namespace: tanzu-sync
-            #   create_export: true
            - name: my-registry-credentials
              namespace: tap-install
              create_export: true
