@@ -19,5 +19,5 @@ spec:
             class: contour
             podTemplate:
               spec:
-                serviceAccountName: tap-gui
+                serviceAccountName: cm-sa
 
