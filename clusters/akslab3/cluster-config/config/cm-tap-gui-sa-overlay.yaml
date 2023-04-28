@@ -14,9 +14,9 @@ stringData:
     #@ end
 
 
-    #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}}), expects="0+"
-    --- 
-    #@ addImagePullSecret()
+   #! #@overlay/match by=overlay.subset({"kind":"ServiceAccount","metadata":{"name":"tap-gui", "namespace": "tap-gui"}}), expects="0+"
+   #! --- 
+   #! #@ addImagePullSecret()
 
    #! #@overlay/match by=overlay.subset({"metadata":{"name":"tap-gui"},"kind":"ServiceAccount"}), expects="0+"
    #! #@ add_orphan_annotation()
