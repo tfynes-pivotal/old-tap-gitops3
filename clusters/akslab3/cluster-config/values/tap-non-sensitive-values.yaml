@@ -100,24 +100,24 @@ tap_install:
         cnrs:
           domain_template: '{{.Name}}-{{.Namespace}}.{{.Domain}}'
 
-        # namespace_provisioner:
-        #   controller: false
-        #   gitops_install:
-        #     ref: origin/main
-        #     subPath: clusters/tmfaks2/cluster-config/namespaces
-        #     url: https://github.com/tfynes-pivotal/tap-gitops2
-        #   additional_sources:
-        #     - git:
-        #         ref: origin/main
-        #         subPath: clusters/tmfaks2/cluster-config/namespaces/namespace-resources
-        #         url: https://github.com/tfynes-pivotal/tap-gitops2
-        #   import_data_values_secrets:
+         namespace_provisioner:
+           controller: false
+           gitops_install:
+             ref: origin/main
+             subPath: clusters/tmfaks3/cluster-config/namespaces
+             url: https://github.com/tfynes-pivotal/tap-gitops3
+           additional_sources:
+             - git:
+                 ref: origin/main
+                 subPath: clusters/tmfaks3/cluster-config/namespaces/namespace-resources
+                 url: https://github.com/tfynes-pivotal/tap-gitops3
+           import_data_values_secrets:
             # - name: install-registry-dockerconfig
             #   namespace: tanzu-sync
             #   create_export: true
-            # - name: my-registry-credentials
-            #   namespace: tap-install
-            #   create_export: true
+             - name: my-registry-credentials
+               namespace: tap-install
+               create_export: true
         package_overlays:
         - name: tap-gui
           secrets:
