@@ -11,6 +11,5 @@ stringData:
     imagePullSecrets:
     #@overlay/append
     - name: install-registry-dockerconfig
-    #!- name: private-registry-credentials
     #@ end
  
