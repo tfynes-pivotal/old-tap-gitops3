@@ -3,4 +3,5 @@ kind: ServiceAccount
 metadata:
   name: cm-sa
 imagePullSecrets:
-- name: private-registry-credentials
+- name: my-dockerhub-credentials
+#! - name: private-registry-credentials
