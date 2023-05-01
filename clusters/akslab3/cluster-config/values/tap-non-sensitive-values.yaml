@@ -113,9 +113,9 @@ tap_install:
               url: https://github.com/tfynes-pivotal/tap-gitops3
             path: _ytt_lib/namespace-resources
           import_data_values_secrets:
-           - name: user-registry-dockerconfig
-             namespace: tap-install
-             create_export: true
+          #  - name: user-registry-dockerconfig
+          #    namespace: tap-install
+          #    create_export: true
         package_overlays:
         - name: tap-gui
           secrets:
