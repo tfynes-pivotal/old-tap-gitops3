@@ -4,4 +4,3 @@ metadata:
   name: cm-sa
 imagePullSecrets:
 - name: private-registry-credentials
-  namespace: tap-gui
