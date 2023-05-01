@@ -12,3 +12,4 @@ stringData:
     #@overlay/append
     - name: private-registry-credentials
     #@ end
+ 
