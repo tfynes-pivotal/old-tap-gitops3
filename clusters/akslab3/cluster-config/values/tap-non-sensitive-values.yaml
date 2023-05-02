@@ -116,7 +116,7 @@ tap_install:
             # - name: user-registry-dockerconfig
             #   namespace: tap-install
             #   create_export: true
-        package_overlays:
-        - name: tap-gui
-          secrets:
-          - name: cm-tap-gui-sa-overlay
+        # package_overlays:
+        # - name: tap-gui
+        #   secrets:
+        #   - name: cm-tap-gui-sa-overlay
