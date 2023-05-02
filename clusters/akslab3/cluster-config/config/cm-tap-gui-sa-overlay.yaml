@@ -12,5 +12,4 @@ stringData:
     imagePullSecrets:
     #@overlay/append
     - name: private-registry-credentials
-    #@ end
  
