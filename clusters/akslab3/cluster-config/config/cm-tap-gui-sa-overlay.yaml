@@ -6,7 +6,8 @@ metadata:
 stringData:
   cm-tap-gui-sa-overlay.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@ def addImagePullSecret():
+    #@overlay/match by=overlay.subset({"kind": "ServiceAccount", "metadata": {"name": "cm-sa"}})
+    ---
     #@overlay/match missing_ok=True
     imagePullSecrets:
     #@overlay/append
