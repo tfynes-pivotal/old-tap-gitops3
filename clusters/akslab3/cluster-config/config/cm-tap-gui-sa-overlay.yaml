@@ -10,6 +10,6 @@ stringData:
     #@overlay/match missing_ok=True
     imagePullSecrets:
     #@overlay/append
-    - name: install-registry-dockerconfig
+    - name: private-registry-credentials
     #@ end
  
