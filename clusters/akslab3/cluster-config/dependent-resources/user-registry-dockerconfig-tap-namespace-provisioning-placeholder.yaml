@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: user-registry-dockerconfig
+  namespace: tap-namespace-provisioning
+  annotations:
+    secretgen.carvel.dev/image-pull-secret: "user-registry-dockerconfig"
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: e30K
